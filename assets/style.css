@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger {
+    width: 20px;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+}
+
+.menu-btn_burger::before {
+    transform: translateY(-5px);
+}
+
+.menu-btn_burger::after {
+    transform: translateY(5px);
+}
+
+/* animation */
+.menu-btn.open .menu-btn_burger {
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+    transform: rotate(45deg)
+}
+
+.menu-btn.open .menu-btn_burger::after {
+    transform: rotate(-45deg)
+}
+
+
